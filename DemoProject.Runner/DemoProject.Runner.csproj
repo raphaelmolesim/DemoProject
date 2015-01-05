@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D73CF4EA-921E-4443-A361-B93AD48EFBA9}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{6F08F7C4-3909-45EC-B02E-89EE15ABDD7F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DemoProject.Core</RootNamespace>
-    <AssemblyName>DemoProject.Core</AssemblyName>
+    <RootNamespace>DemoProject.Runner</RootNamespace>
+    <AssemblyName>DemoProject.Runner</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,13 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cartao.cs" />
-    <Compile Include="DadosDaCompra.cs" />
-    <Compile Include="ICompraCartao.cs" />
-    <Compile Include="Judge.cs" />
+    <Compile Include="ConsoleApp.cs" />
+    <Compile Include="IConsoleApp.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResultadoDaCompra.cs" />
-    <Compile Include="StatusCompra.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DemoProject.Core\DemoProject.Core.csproj">
+      <Project>{d73cf4ea-921e-4443-a361-b93ad48efba9}</Project>
+      <Name>DemoProject.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

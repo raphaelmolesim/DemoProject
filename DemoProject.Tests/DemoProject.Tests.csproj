@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -53,12 +56,20 @@
     <Compile Include="JudgeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AttributesExample.cs" />
+    <Compile Include="RunnerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DemoProject.Core\DemoProject.Core.csproj">
       <Project>{d73cf4ea-921e-4443-a361-b93ad48efba9}</Project>
       <Name>DemoProject.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DemoProject.Runner\DemoProject.Runner.csproj">
+      <Project>{6f08f7c4-3909-45ec-b02e-89ee15abdd7f}</Project>
+      <Name>DemoProject.Runner</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

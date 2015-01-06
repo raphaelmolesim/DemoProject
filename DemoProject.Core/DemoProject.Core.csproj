@@ -45,6 +45,7 @@
     <Compile Include="Judge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultadoDaCompra.cs" />
+    <Compile Include="ServicoDeCompra.cs" />
     <Compile Include="StatusCompra.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

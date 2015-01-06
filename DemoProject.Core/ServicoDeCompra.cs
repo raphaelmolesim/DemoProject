@@ -10,7 +10,7 @@ namespace DemoProject.Core
     {
         public ResultadoDaCompra Comprar(Cartao cartao, DadosDaCompra dados)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }
